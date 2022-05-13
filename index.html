@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<script>
+function sendMessage(){
+    var msgInp = document.getElementById("main-msg-input").value
+    if (msgInp.length < 1) return
+
+    // send message to backend
+    alert(msgInp)
+
+}
+
+</script>
+
+<body>
+
+<input alt="Hi!" type="text" autofocus="true" id="main-msg-input">
+
+<input type="button" onclick="sendMessage()" value="Click Me!">
+</body>
+</html>
