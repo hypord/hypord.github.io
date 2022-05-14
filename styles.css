@@ -1,7 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html {
+    /* background-image: url(https://media.discordapp.net/attachments/864566480363585546/872134358457258004/unknown.png?width=1174&height=630);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+    background-color: #363434;
+}
+
+html { overflow-y: scroll; overflow-x:hidden; }
+/* body { position: absolute; } */
+
+.container-navbar {
+    /* background-color: #000000; */
+    text-align: left;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    /* border-bottom: 1px, ; */
+}
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+    margin-top: 0px;    /* if you want it vertically middle of the navbar. */
+}
+
+.container-navbar ul li {
+    list-style: none;
+    display: inline;
+    margin: 10px;
+}
+
+.container-navbar a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.container-navbar a:hover {
+    color: #7289da;
+}
+
+.container-main {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 40%;
+}
+
+.container-main h1 {
+    color: aliceblue;
+    font-family: sans-serif;
+}
+
+.container-main p {
+    font-family: sans-serif;
+    font-size: 19px;
+    color: aliceblue;
+}
+
+.container-main a {
+    background: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.container-main button {
+    border: none;
+    background: linear-gradient(to right, #478ac9, #e68387);
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px 5px;
+}
+
+.container-footer {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0px;
+    background-color: #1f1f1f;
+}
+
+.btn-move {
+    vertical-align: middle;
+    margin: 0;
+    width: 96.5%
+}
+
+.msg-chat-box {
+    color: white;
+}
+
 /* html {
 
     white-space: pre-line;
-} */
+}
 
 .main-inp-row {
     position: fixed;
@@ -12,11 +109,11 @@
     margin: auto;
 }
 
-/* .main-inp-usrnm {
+.main-inp-usrnm {
     right: auto;
-} */
+}
 
-/* .main-inp-row input { 
+.main-inp-row input { 
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
