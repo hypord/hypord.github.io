@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+
+    var username, discriminator;
+
+    window.onload = () => {
+        var fragment = new URLSearchParams(window.location.hash.slice(1));
+
+        var [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+        if (!accessToken) {
+            return //(document.getElementById('login').style.display = 'block');
+        }
+
+        fetch('https://discord.com/api/users/@me', {
+            headers: {
+                authorization: `${tokenType} ${accessToken}`,
+            },
+        })
+            .then(result => result.json())
+            .then(response => {
+                const { username1, discriminator1 } = response;
+                username = username1
+                discriminator = discriminator1
+                //document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+            })
+            .catch(console.error);
+            return
+    };
+
+    function sendMessage(){
+        var msgInp = document.getElementById("main-msg-input").value;
+        if (msgInp.length < 1) return;
+
+        var text = document.createTextNode(`${username}: ${msgInp}\n`);
+        document.createElement("br");
+        var pNode = document.getElementById("chatText");
+
+        pNode.appendChild(text);
+
+        // let renderedText = htmlElement.innerText
+        // htmlElement.innerText = htmlElement.innerText + string + "\n"
+
+        // var par = document.createElement("p");
+        // var text = document.createTextNode(msgInp);
+        // par.appendChild(text);
+
+        document.getElementById("main-msg-input").value = "";
+        // send message to backend
+        //alert(msgInp)
+
+    }
+
+</script>
+<header>
+    <div class="container-navbar">
+        <ul>
+            <a href="index.html">
+            <!-- <img src="./resouces/kethos_white.png" class="logo"><a> -->
+            <li></li>
+            <li><a href="./index.html">Home</a></li>
+            <li id="login"><a 
+                href="https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fchat%2Findex.html&response_type=code&scope=identify"
+                >Login</a></li>
+        </ul>
+    </div>
+
+</header>
+
+
+<body>
+
+
+    <pre class="msg-chat-box" id="chatText"></pre>
+
+    <div class="container-footer">
+        <input alt="Hi!" type="text" autofocus="true" id="main-msg-input">
+        <input type="button" onclick="sendMessage()" value="Send">
+        <!-- Username: <input alt="Hi!" type="text" autofocus="true" id="main-msg-usrnm"> -->
+    </div>
+</body>
+</html>
+
+<!-- 
+    https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fchat%2Findex.html&response_type=code&scope=identify
+ -->

@@ -5,29 +5,6 @@
 </head>
 
 <script>
-function sendMessage(){
-    var msgInp = document.getElementById("main-msg-input").value;
-    var username = document.getElementById("main-msg-usrnm").value;
-    if (msgInp.length < 1) return;
-
-    var text = document.createTextNode(`${username}: ${msgInp}\n`);
-    document.createElement("br");
-    var pNode = document.getElementById("chatText");
-
-     pNode.appendChild(text);
-
-    // let renderedText = htmlElement.innerText
-    // htmlElement.innerText = htmlElement.innerText + string + "\n"
-
-    // var par = document.createElement("p");
-    // var text = document.createTextNode(msgInp);
-    // par.appendChild(text);
-
-    document.getElementById("txtSearch").value = "";
-    // send message to backend
-    //alert(msgInp)
-
-}
 
 </script>
 <header>
@@ -37,7 +14,9 @@ function sendMessage(){
             <!-- <img src="./resouces/kethos_white.png" class="logo"><a> -->
             <li></li>
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./auth/">Login</a></li>
+            <li><a 
+                href="https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fchat%2Findex.html&response_type=code&scope=identify"
+                >Login</a></li>
         </ul>
     </div>
 
@@ -45,20 +24,10 @@ function sendMessage(){
 
 
 <body>
-    <a id="login" style="display: none;" href="your-oauth2-URL-here">Identify Yourself</a>
-
-
-
-    <pre class="msg-chat-box" id="chatText"></pre>
-
-    <div class="container-footer">
-        <input alt="Hi!" type="text" autofocus="true" id="main-msg-input">
-        <input type="button" onclick="sendMessage()" value="Send">
-        Username: <input alt="Hi!" type="text" autofocus="true" id="main-msg-usrnm">
-    </div>
+    A cool Chat website that the hyplix team is working on!
 </body>
 </html>
 
 <!-- 
-    https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=http%3A%2F%2Flocalhost%3A8080&response_type=code&scope=identify
+    https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fchat%2Findex.html&response_type=code&scope=identify
  -->
