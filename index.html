@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <script>
 function sendMessage(){
-    var msgInp = document.getElementById("main-msg-input").value
-    if (msgInp.length < 1) return
+    var msgInp = document.getElementById("main-msg-input").value;
+    var username = document.getElementById("main-msg-usrnm").value;
+    if (msgInp.length < 1) return;
 
+    var text = document.createTextNode(`${username}: ${msgInp}\n`);
+    document.createElement("br");
+    var pNode = document.getElementById("chatText");
+
+     pNode.appendChild(text);
+
+    // let renderedText = htmlElement.innerText
+    // htmlElement.innerText = htmlElement.innerText + string + "\n"
+
+    // var par = document.createElement("p");
+    // var text = document.createTextNode(msgInp);
+    // par.appendChild(text);
+
+    document.getElementById("txtSearch").value = "";
     // send message to backend
-    alert(msgInp)
+    //alert(msgInp)
 
 }
 
 </script>
 
 <body>
+    <pre id="chatText"></pre>
 
-<input alt="Hi!" type="text" autofocus="true" id="main-msg-input">
-
-<input type="button" onclick="sendMessage()" value="Click Me!">
-
-hiii
+    <div class="main-inp-row">
+        <input alt="Hi!" type="text" autofocus="true" id="main-msg-input">
+        <input type="button" onclick="sendMessage()" value="Send">
+        Username: <input alt="Hi!" type="text" autofocus="true" id="main-msg-usrnm">
+    </div>
 </body>
 </html>
