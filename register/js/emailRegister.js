@@ -1,7 +1,7 @@
 
 function tryEmailRegister(){
     var email = document.getElementById("reg-inp-email").value;
-    var userName = document.getElementById("reg-inp-username").value;
+    var username = document.getElementById("reg-inp-username").value;
     var displayName = document.getElementById("reg-inp-displayname").value;
     var password = document.getElementById("reg-inp-password").value;
     var passwordConf = document.getElementById("reg-inp-password-confirm").value;
@@ -13,8 +13,8 @@ function tryEmailRegister(){
     if (password != passwordConf) return alert("The passwords do not match!")
     var data = {
         "email": email,
-        "username": userName,
-        "displayname": displayName,
+        "username": username,
+        "displayName": displayName,
         "password": password
     }
 
