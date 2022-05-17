@@ -13,3 +13,14 @@ function makeId(){
 }
 
 makeId()
+
+db.createUser(
+    {
+      user: "admin",
+      pwd: "k31t0s_f7w", // or cleartext password
+      roles: [
+        { role: "userAdminAnyDatabase", db: "admin" },
+        { role: "readWriteAnyDatabase", db: "admin" }
+      ]
+    }
+  )

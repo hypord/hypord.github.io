@@ -2,9 +2,12 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="./js/"></script>
+    <script src="./js/emailLogin.js"></script>
 </head>
+
+<script>
+
+</script>
 <header>
     <div class="container-navbar">
         <ul>
@@ -21,18 +24,20 @@
 
 
 <body>
-
-
-    <pre class="msg-chat-box" id="chatText"></pre>
-
-    <div class="container-footer">
-        <input alt="Hi!" type="text" autofocus="true" id="main-msg-input">
-        <input type="button" onclick="sendMessage()" value="Send">
-        <!-- Username: <input alt="Hi!" type="text" autofocus="true" id="main-msg-usrnm"> -->
-    </div>
+    <div class="container">   
+        <label>Email : </label>   
+        <input type="text" placeholder="Enter Email" name="email" required>  
+        <label>Password : </label>   
+        <input type="password" placeholder="Enter Password" name="password" required>  
+        <button type="submit" onclick="tryEmailLogin()">Login</button>   
+        <input type="checkbox" checked="checked"> Remember me   
+        <button type="button" class="cancelbtn"> Cancel</button>   
+        Forgot <a href="#" onclick="alert('well thats too bad cause we didnt implement it yet')"> password? </a>   
+    </div> 
 </body>
 </html>
 
 <!-- 
     https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=https%3A%2F%2Fhypord.mcorange.tk&response_type=code&scope=identify%20email
  -->
+</div>

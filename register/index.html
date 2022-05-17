@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./js/emailRegister.js"></script>
+</head>
+
+<script>
+
+</script>
+<header>
+    <div class="container-navbar">
+        <ul>
+            <a href="index.html">
+            <!-- <img src="./resouces/kethos_white.png" class="logo"><a> -->
+            <li></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../login/index.html">Login</a></li>
+            <li><a href="../register/index.html">Register</a></li>
+        </ul>
+    </div>
+
+</header>
+
+
+<body>
+    <div class="container">   
+        <label>Username : </label>   
+        <input id="reg-inp-username" type="text" placeholder="Enter Username" name="username" required>
+        <label>Displayname : </label> 
+        <input id="reg-inp-displayname" type="text" placeholder="Enter Displayname" name="displayname" required>  
+        <label>Email : </label>   
+        <input id="reg-inp-email" type="text" placeholder="Enter Email" name="email" required>
+        <label>Password : </label>   
+        <input id="reg-inp-password" type="password" placeholder="Enter Password" name="password" required>
+        <label>Confirm Password : </label>   
+        <input id="reg-inp-password-confirm" type="password" placeholder="Re-Enter Password" name="confirmpassword" required>  
+        <button type="submit" onclick="tryEmailRegister()">Login</button>   
+        <input type="checkbox" checked="checked"> Remember me   
+        <button type="button" class="cancelbtn"> Cancel</button>
+        Forgot <a href="#" onclick="alert('well thats too bad cause we didnt implement it yet')"> password? </a>   
+    </div> 
+</body>
+</html>
+
+<!-- 
+    https://discord.com/api/oauth2/authorize?client_id=975052663773339678&redirect_uri=https%3A%2F%2Fhypord.mcorange.tk&response_type=code&scope=identify%20email
+ -->
+</div>
