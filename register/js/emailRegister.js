@@ -6,7 +6,7 @@ function tryEmailRegister(){
     var password = document.getElementById("reg-inp-password").value;
     var passwordConf = document.getElementById("reg-inp-password-confirm").value;
 
-    if (!email || !userName || !displayName || !password || !passwordConf){
+    if (!email || !username || !displayName || !password || !passwordConf){
         return alert("Please fill all fields!")
     }
 
