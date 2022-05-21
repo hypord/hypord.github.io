@@ -1,0 +1,39 @@
+
+button {   
+    background-color: #4CAF50;   
+    width: 100%;  
+     color: white;   
+     padding: 15px;   
+     margin: 10px 0px;   
+     border: none;   
+     cursor: pointer;   
+}
+
+form {   
+     border: 3px solid #363434;   
+}
+
+input[type=text], input[type=password] {   
+     width: 100%;   
+     margin: 8px 0;  
+     padding: 12px 20px;   
+     display: inline-block;   
+     border: 2px solid green;   
+     box-sizing: border-box;   
+}
+
+button:hover {   
+     opacity: 0.7;   
+}   
+.cancelbtn {   
+     width: auto;   
+     padding: 10px 18px;  
+     margin: 10px 5px;  
+}   
+     
+  
+.container-login {   
+     padding: 100px;   
+     background-color: #363434;  
+     color: white;
+}
