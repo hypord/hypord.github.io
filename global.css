@@ -10,6 +10,7 @@
 }
 
 html {
+    font-family: 'Poppins', sans-serif;
     /* background-image: url(https://media.discordapp.net/attachments/864566480363585546/872134358457258004/unknown.png?width=1174&height=630);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -29,7 +30,6 @@ html { overflow-y: scroll; overflow-x:hidden; }
     text-align: left;
     width: 100%;
     font-size: 17px;
-    font-family: 'Poppins', sans-serif;
     position: fixed;
     text-align: left;
     left: 0;
