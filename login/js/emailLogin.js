@@ -1,5 +1,3 @@
-
-
 function tryEmailLogin(){
     var baseUrl = "http://localhost:3000"
 
@@ -23,11 +21,14 @@ function tryEmailLogin(){
         }
     })
     .then(function (response) {
-        rdata = response.data
+        setCookie("user", JSON.stringify(response), 7)
+        console.log(getCookie("user"))
+
+        window.location.href = "../chat/";
     })
     .catch(function (error) {
             alert(`${error.response.data.message}\n\nSupport: https://discord.gg/845cUp3YHk`)
     })
 
-    setCookie("user", rdata, 7)
+    
 }
